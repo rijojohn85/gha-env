@@ -10,9 +10,9 @@ env:
 jobs:
   test:
     env: # job level env. Can do similiary for step as well
-      MONGODB_CLUSTER_ADDRESS: cluster0.oe4o1.mongodb.net
-      MONGODB_USERNAME: rijojohn85
-      MONGODB_PASSWORD: YqxKV06tY5kY8mpM
+      MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
